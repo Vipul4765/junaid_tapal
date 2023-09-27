@@ -1,4 +1,4 @@
-# Now you can import option_menu
+
 from streamlit_option_menu import option_menu
 import streamlit as st
 import pandas as pd
@@ -23,7 +23,7 @@ def load_lottie1(url):
     return r.json()
 
 
-lottie_coder = load_lottie1('https://lottie.host/69aed16c-7cf5-46b9-beb6-50aee75e3535/1IH5t9bwIN.json')
+lottie_coder = load_lottie1('https://lottie.host/dcb96a6c-63df-40de-94ab-fdf386d34d71/fpVA71rpTV.json')
 
 st.write('##')
 st.subheader('I am Junaid Tapal')
@@ -56,18 +56,13 @@ if selected == 'About':
             boxes.create_skill_buttons(skills)
 
         with col2:
-            with col2:
-                col1, col2 = st.columns(2)
-                with col2:
-                    st_lottie(lottie_coder, width=350, )  # Adjust width and alignment
-                st.write('---')
-                st.header("👨‍💻Coding Profile")
-                st.markdown("- [GFG](https://auth.geeksforgeeks.org/user/vipuldhankar)")
-                st.markdown("- [Leetcode](https://leetcode.com/coder_123_/)")
-                st.markdown("- [CodeChef](https://www.codechef.com/users/vipuldhankar17)")
-                st.markdown("- [Hackerrank](https://www.hackerrank.com/vipuldhankar1711)")
-                st.markdown(
-                    "- [Coding Ninja](https://www.codingninjas.com/studio/profile/a732a5a7-88e5-44ab-9eaf-4af8a4cb59ff)")
+
+            st_lottie(lottie_coder,height=277 )
+                # Adjust width and alignment
+            st.write('---')
+            st.header("👨‍💻Coding Profile")
+            st.markdown("- [Leetcode](https://leetcode.com/tapal_junaid/)")
+            st.markdown("- [Hackerrank](https://www.hackerrank.com/tj6130)")
 
         st.write('-----')
         with st.container():
@@ -144,7 +139,7 @@ if selected == 'Projects':
     with st.container():
         selected = option_menu(
             menu_title=None,
-            options=['IPL API', 'Workshop platform - DOM and Mysql', 'VIRTUAL MOUSE - virtual mouse using ARTIFICIAL INTELLIGENCE and ML ', 'Driver Drowsiness Detection - software - PYTHON ', 'RAILWAY TICKET BOOKING SYSTEM - USING C language Merge Sort '],
+            options=['IPL API', 'Workshop platform - DOM and Mysql', 'VIRTUAL MOUSE - virtual mouse using ARTIFICIAL INTELLIGENCE and ML', 'Driver Drowsiness Detection - software - PYTHON', 'Full-Stack Web Project - Java and ReactJS'],
             icons=['rocket-takeoff', 'rocket-takeoff', 'rocket-takeoff', 'rocket-takeoff', 'rocket-takeoff'],
         )
     if selected == 'IPL API':
@@ -164,10 +159,107 @@ if selected == 'Projects':
 
 
 
+
         with col2:
             stack = ['Flask', 'Python', 'Pandas', 'Numpy', 'Data Analysis', 'Kaggle']
 
             boxes.create_skill_buttons(stack)
             project_related.main()
+
+    if selected == 'Workshop platform - DOM and Mysql':
+        st.title('Project - Workshop platform - DOM and MySQL')
+        #st.image('workshop_image.jpg', use_column_width=True)  # You can add an image for illustration
+        st.markdown(
+            """
+            This platform provides students with an effortless way to discover and participate in workshops. It also empowers club leaders
+            to organize workshops that align with student interests, ultimately increasing workshop attendance.
+
+            **Key Features**:
+            - **Workshop Discovery**: Easily find workshops based on your interests and preferences.
+            - **Club Heads**: Club leaders can gauge student interest and organize relevant workshops.
+            - **Efficient Registration**: Streamlined registration process for hassle-free participation.
+            - **Feedback**: Provide feedback on workshops to help improve future events.
+
+            Whether you're a student eager to learn or a club leader looking to engage your peers, our Workshop platform - DOM and MySQL
+            has you covered!
+            """
+        )
+
+    if selected == 'VIRTUAL MOUSE - virtual mouse using ARTIFICIAL INTELLIGENCE and ML':
+        st.title('Virtual Mouse Control')
+        # st.image('virtual_mouse_image.jpg', use_column_width=True)  # Add an image for illustration
+
+        st.markdown(
+            """
+            **Experience a Revolution in Mouse Control!**
+
+            Our Virtual Mouse Control system brings the future to your fingertips. Imagine harnessing the power of hand gestures to navigate your computer seamlessly. With this cutting-edge technology, you can perform all your mouse functions effortlessly:
+
+            - **Intuitive Gestures**: Left-click, right-click, and perform settings changes with simple hand movements.
+            - **Drag and Drop**: Effortlessly move and organize files and folders.
+            - **Precision Control**: Fine-tune your actions with pinpoint accuracy.
+            - **No Hardware Required**: No need for additional equipment – just your hands and our software.
+
+            Whether you're a professional looking for a more efficient workflow or simply seeking an innovative way to interact with your computer, our Virtual Mouse Control system empowers you to take control like never before.
+
+
+            Get ready to revolutionize your computing experience with the future of mouse control!
+            """,
+            unsafe_allow_html=True
+        )
+
+    if selected == 'Driver Drowsiness Detection - software - PYTHON':
+        st.title('Driver Drowsiness Detection - Python Software')
+        # st.image('drowsiness_detection_image.jpg', use_column_width=True)  # Add an image for illustration
+
+        st.markdown(
+            """
+            **Stay Awake, Stay Safe!**
+
+            Presenting our Driver Drowsiness Detection system, powered by Python. This software provides a comprehensive solution to ensure road safety by preventing drowsy driving incidents. It incorporates advanced techniques to monitor driver behavior and alert in real-time.
+
+            **Key Features**:
+            - **Face Detection**: Utilizing state-of-the-art algorithms to detect the driver's face accurately.
+            - **Eye Position Tracking**: Real-time monitoring of eyelid movements and gaze direction.
+            - **AI-Based Eye Tracking**: Continuous analysis of eye behavior to detect signs of drowsiness.
+            - **Instant Alerts**: Immediate alerts to prevent accidents caused by drowsiness.
+            - **Seamless Integration**: Easily integrates with your vehicle's safety system.
+            - **Python-Powered**: Developed using Python for flexibility and reliability.
+
+            Whether you're a professional driver or a safety-conscious individual, our Driver Drowsiness Detection software is your vigilant co-pilot on the road.
+
+
+            Say goodbye to drowsy driving—prioritize safety with our Python-powered solution.
+            """,
+            unsafe_allow_html=True
+        )
+
+    if selected == 'Full-Stack Web Project - Java and ReactJS':
+        st.title('Full-Stack Web Project - Java and ReactJS')
+        # st.image('fullstack_web_project_image.jpg', use_column_width=True)  # Add an image for illustration
+
+        st.markdown(
+            """
+            **Empowering the Web with Java and ReactJS!**
+
+            Our Full-Stack Web Project is a testament to the synergy of technology, bridging the gap between front-end and back-end development. With Java powering the backend and ReactJS driving the frontend, we've created a comprehensive web solution that covers every aspect of modern web development.
+
+            **Key Highlights**:
+            - **Security**: Robust security measures ensure your data is protected.
+            - **CRUD Operations**: Seamlessly Create, Read, Update, and Delete data with ease.
+            - **Databases**: Efficiently manage data using state-of-the-art databases.
+            - **Frontend Frameworks**: ReactJS forms the foundation for a responsive and dynamic user interface.
+            - **State Management**: Utilize advanced state management techniques for a seamless user experience.
+            - **APIs**: Power your application with flexible and well-documented APIs.
+            - **Version Control**: Implement version control systems for code management and collaboration.
+
+            Our full-stack web project is a testament to the power of technology, offering a secure, efficient, and user-friendly web experience. Whether you're a developer, business owner, or user, our project brings the best of both worlds to the web.
+
+
+            Join us on a journey of innovation and excellence in web development!
+            """,
+            unsafe_allow_html=True
+        )
+
 if selected == 'Contact':
     contact_info.create_streamlit_content()
